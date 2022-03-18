@@ -219,7 +219,7 @@ MonoBehaviour:
   KnockBackForce: 5
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   _isOnGround: 0
   _canDoubleJump: 0
 --- !u!114 &2421343729466651749
