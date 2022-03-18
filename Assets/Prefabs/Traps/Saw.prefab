@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 6552961399593665750}
   - component: {fileID: 3693814058566569533}
   - component: {fileID: 1712864689178210630}
-  - component: {fileID: 7410121158377176690}
-  - component: {fileID: 3643559457874577505}
+  - component: {fileID: 3171018082612638378}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Enemy
@@ -121,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.12
---- !u!114 &7410121158377176690
+--- !u!114 &3171018082612638378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,21 +129,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4239667856346744699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f40ad45f490aa034cba4aedaaa30a73d, type: 3}
+  m_Script: {fileID: 11500000, guid: b80186a0ea0ca9a439e7e899f178909b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PatrolPoints: []
   Speed: 0
-  StartWaitTime: 0
---- !u!114 &3643559457874577505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4239667856346744699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18cb35466cf19c4ab8be8c714c99652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  WaitTime: 0

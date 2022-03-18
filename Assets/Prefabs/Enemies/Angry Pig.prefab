@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4730529226467593564}
   - component: {fileID: 7282811037208706094}
   - component: {fileID: 1725577528633039505}
-  - component: {fileID: 190984511}
   - component: {fileID: 1958096720914793532}
   m_Layer: 0
   m_Name: Angry Pig
@@ -121,23 +120,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06675315, y: -0.13121295}
   m_Size: {x: 1.2030358, y: 1.60847}
   m_Direction: 0
---- !u!114 &190984511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6616006773989490306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f40ad45f490aa034cba4aedaaa30a73d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PatrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  Speed: 3
-  StartWaitTime: 2
 --- !u!114 &1958096720914793532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18cb35466cf19c4ab8be8c714c99652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BounceForce: 0
+  CanTakeDamage: 0
