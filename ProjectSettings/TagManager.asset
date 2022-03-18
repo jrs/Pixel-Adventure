@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Stomp
+  - Diamond
+  - Falling Platform
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Player
+  - Falling Platforms
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1137724431
+    locked: 0
+  - name: World
+    uniqueID: 2439378141
+    locked: 0
+  - name: Objects
+    uniqueID: 3003944495
+    locked: 0
+  - name: Enemies
+    uniqueID: 2819761883
+    locked: 0
+  - name: Player
+    uniqueID: 545367703
+    locked: 0
