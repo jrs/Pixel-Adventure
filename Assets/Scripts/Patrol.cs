@@ -18,8 +18,8 @@ public class Patrol : MonoBehaviour
     void Start()
     {
         _myAnim = GetComponent<Animator>();
-        transform.position = PatrolPoints[0].position;
-        transform.rotation = PatrolPoints[0].rotation;
+        //transform.position = PatrolPoints[0].position;
+        //transform.rotation = PatrolPoints[0].rotation;
         _waitTime = StartWaitTime;
     }
 
