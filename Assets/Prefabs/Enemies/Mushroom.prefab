@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8643353818633855859}
   - component: {fileID: 2421305051942807769}
   - component: {fileID: 6094131399482302882}
-  - component: {fileID: 8891781172334092215}
+  - component: {fileID: 6906181559053271558}
+  - component: {fileID: -605677713809087276}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Enemy
@@ -120,7 +121,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.3933903}
   m_Size: {x: 1.0915523, y: 1.2132194}
   m_Direction: 0
---- !u!114 &8891781172334092215
+--- !u!50 &6906181559053271558
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758303575003070956}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &-605677713809087276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,9 +151,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6758303575003070956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f40ad45f490aa034cba4aedaaa30a73d, type: 3}
+  m_Script: {fileID: 11500000, guid: 37dccf8776f0cd24db86f4a8d58be556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolPoints: []
-  Speed: 0
-  StartWaitTime: 0
+  Speed: 5
+  BounceForce: 15
+  IsFacingLeft: 1
+  CanTakeDamage: 1
+  PatrolPointOne: {fileID: 0}
+  PatrolPointTwo: {fileID: 0}

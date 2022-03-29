@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class Stomp : MonoBehaviour
 {
-    [SerializeField] private float BounceForce = 0;
+    public float BounceForce = 15;
 
     private Rigidbody2D _myRigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
-        _myRigidbody = GetComponent<Rigidbody2D>();
+        _myRigidbody = transform.parent.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    public void StompedByPlayer()
-    {
-
+        if(other.CompareTag("Enemy") && transform.position.y > other.transform.position.y)
+        {
+            _myRigidbody.velocity = new Vector2(_myRigidbody.velocity.x, BounceForce);
+        }
     }
 }
