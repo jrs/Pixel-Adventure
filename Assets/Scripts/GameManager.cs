@@ -7,11 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public float waitToRespawn;
-
     [SerializeField] int _collectibleCount = 0;
     [SerializeField] int _livesCount = 3;
-    [SerializeField] Vector3 _respawnLocation;
     [SerializeField] string _sceneName;
 
     void Awake()
@@ -52,14 +49,19 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene("Level 1");
-        UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
-        StartCoroutine(RespawnPlayerRoutine());
-    }
+        _livesCount--;
 
-    public void UpdatePlayerRespawnLocation(Vector3 location)
-    {
-        _respawnLocation = location;
+        if (_livesCount > 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
+        }
+        else
+        {
+            _collectibleCount = 0;
+            _livesCount = 3;
+            SceneManager.LoadScene("Game Over");
+        }
     }
 
     public void UpdateCollectibleAmount()
@@ -67,26 +69,6 @@ public class GameManager : MonoBehaviour
         _collectibleCount++;
         UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
         Debug.Log("The score is: " + _collectibleCount);
-    }
-
-    public Vector3 SetPlayerStartPostion()
-    {
-        return _respawnLocation;
-    }
-
-    private IEnumerator RespawnPlayerRoutine()
-    {
-        //PlayerController.Instance.gameObject.SetActive(false);
-
-        yield return new WaitForSeconds(waitToRespawn - (1f / UIManager.Instance.fadeSpeed));
-
-        UIManager.Instance.FadeToBlack();
-
-        yield return new WaitForSeconds((1f / UIManager.Instance.fadeSpeed) + 0.2f);
-
-        UIManager.Instance.FadeFromBlack();
-
-        //PlayerController.Instance.gameObject.SetActive(true);
     }
 
 }

@@ -19,8 +19,6 @@ public class CheckPoints : MonoBehaviour
             Animator checkPointAnim = GetComponent<Animator>();
             checkPointAnim.SetBool("playerChecked", true);
             HasPlayerChecked = true;
-           
-            GameManager.Instance.UpdatePlayerRespawnLocation(CheckPointLocation);
         }
     }
 }

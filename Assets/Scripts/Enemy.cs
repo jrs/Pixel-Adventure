@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float BounceForce;
-    public bool CanTakeDamage;
+    public float BounceForce = 5;
+    public bool CanTakeDamage = true;
 
     private Animator _myAnim;
     private Collider2D _myCollider;
@@ -19,30 +19,19 @@ public class Enemy : MonoBehaviour
         _myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            FindObjectOfType<PlayerHealth>().DealDamage();
+            PlayerHealth.Instance.DealDamage();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void StompEnemy()
     {
-        if (other.tag == "Stomp" && CanTakeDamage)
-        {
-            Debug.Log("the player stomped on me.");
-            PlayerController.Instance.BouncePlayer(BounceForce);
-            _myAnim.SetTrigger("Stomped");
-            _myRigidbody.velocity = new Vector2(_myRigidbody.velocity.x, BounceForce);
-            _myRigidbody.gravityScale = 3;
-            _myCollider.enabled = !_myCollider.enabled;
-        }
+        _myAnim.SetTrigger("Stomped");
+        _myRigidbody.velocity = new Vector2(_myRigidbody.velocity.x, BounceForce);
+        _myRigidbody.gravityScale = 3;
+        _myCollider.enabled = !_myCollider.enabled;
     }
 }

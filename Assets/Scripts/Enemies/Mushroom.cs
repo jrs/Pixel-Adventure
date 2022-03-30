@@ -63,25 +63,16 @@ public class Mushroom : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            FindObjectOfType<PlayerHealth>().DealDamage();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Stomp" && CanTakeDamage)
-        {
-            CanTakeDamage = false;
-            _myAnim.SetTrigger("Stomped");
-            _myAnim.SetBool("IsMoving", false);
-            _myRigidbody.velocity = new Vector2(0, 10);
-            _myRigidbody.gravityScale = 3;
-            _myCollider.enabled = !_myCollider.enabled;
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.tag == "Stomp" && CanTakeDamage)
+    //    {
+    //        CanTakeDamage = false;
+    //        _myAnim.SetTrigger("Stomped");
+    //        _myAnim.SetBool("IsMoving", false);
+    //        _myRigidbody.velocity = new Vector2(0, 10);
+    //        _myRigidbody.gravityScale = 3;
+    //        _myCollider.enabled = !_myCollider.enabled;
+    //    }
+    //}
 }

@@ -19,6 +19,7 @@ public class Stomp : MonoBehaviour
         if(other.CompareTag("Enemy") && transform.position.y > other.transform.position.y)
         {
             _myRigidbody.velocity = new Vector2(_myRigidbody.velocity.x, BounceForce);
+            other.gameObject.GetComponent<Enemy>().StompEnemy();
         }
     }
 }

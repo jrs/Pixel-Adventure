@@ -21,4 +21,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Level 1");
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
