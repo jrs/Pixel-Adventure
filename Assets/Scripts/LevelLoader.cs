@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator Transition;
     public float TransitionTime = 1f;
+
+    private Animator _transition;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _transition = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,10 +26,15 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void ReloadLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         //play animation
-        Transition.SetTrigger("Start");
+        _transition.SetTrigger("Start");
 
         //wait
         yield return new WaitForSeconds(TransitionTime);

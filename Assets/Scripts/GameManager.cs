@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
         if (_livesCount > 0)
         {
-            //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+            FindObjectOfType<LevelLoader>().ReloadLevel();
             UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
         }
         else

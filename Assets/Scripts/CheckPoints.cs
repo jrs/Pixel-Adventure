@@ -16,9 +16,10 @@ public class CheckPoints : MonoBehaviour
     {
         if(other.CompareTag("Player") && !HasPlayerChecked)
         {
+            HasPlayerChecked = true;
             Animator checkPointAnim = GetComponent<Animator>();
             checkPointAnim.SetBool("playerChecked", true);
-            HasPlayerChecked = true;
+            
         }
     }
 }
