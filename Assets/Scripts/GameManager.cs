@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public Animator Transition;
+    public float TransitionTime = 1f;
+
     [SerializeField] int _collectibleCount = 0;
     [SerializeField] int _livesCount = 3;
     [SerializeField] string _sceneName;
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
 
         if (_livesCount > 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
             UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
         }
         else

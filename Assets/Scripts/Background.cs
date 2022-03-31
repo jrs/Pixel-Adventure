@@ -17,9 +17,9 @@ public class Background : MonoBehaviour
     {
         transform.Translate(Vector3.down * _moveSpeed * Time.deltaTime);
 
-        if(transform.position.y < -17.9999f)
+        if(transform.position.y < -16f)
         {
-            transform.position = new Vector2(0, 0f);
+            transform.position = new Vector2(0, 16f);
         }
     }
 }
