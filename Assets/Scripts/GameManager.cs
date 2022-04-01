@@ -7,9 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Animator Transition;
-    public float TransitionTime = 1f;
-
     [SerializeField] int _collectibleCount = 0;
     [SerializeField] int _livesCount = 3;
     [SerializeField] string _sceneName;

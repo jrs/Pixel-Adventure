@@ -27,7 +27,8 @@ public class Bullet : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            FindObjectOfType<PlayerHealth>().DealDamage();
+            // FindObjectOfType<PlayerHealth>().DealDamage();
+            PlayerHealth.Instance.DealDamage();
             Destroy(this.gameObject);
         }
     }

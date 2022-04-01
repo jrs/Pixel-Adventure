@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mushroom : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float Speed = 5f;
     public float BounceForce = 15f;
