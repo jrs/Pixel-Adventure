@@ -4988,30 +4988,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5791694008674236600, guid: 3dc6ab4e8155e9842bba3a6f50dfb85f, type: 3}
   m_PrefabInstance: {fileID: 1216891490}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1228882368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2874948898953708635, guid: fe7e3533c60349f49be7a2c8289e8929, type: 3}
+--- !u!95 &1228882369 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1228882369, guid: fe7e3533c60349f49be7a2c8289e8929, type: 3}
   m_PrefabInstance: {fileID: 2874948900572010116}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1228882369
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228882368}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b1c5a5c1378d93a4ebf8060b3b1e0378, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &1228882373 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2874948898953708647, guid: fe7e3533c60349f49be7a2c8289e8929, type: 3}
@@ -20967,10 +20948,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2421343729616019128, guid: 23703fb6333507b48891616184286cb9, type: 3}
-      propertyPath: BounceForce
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23703fb6333507b48891616184286cb9, type: 3}
 --- !u!1001 &2511078420615247087
@@ -21061,10 +21038,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 2874948898953708646, guid: fe7e3533c60349f49be7a2c8289e8929, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2874948898953708647, guid: fe7e3533c60349f49be7a2c8289e8929, type: 3}
       propertyPath: m_Pivot.x
       value: 0

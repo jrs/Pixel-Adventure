@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] int _collectibleCount = 0;
     [SerializeField] int _livesCount = 3;
-    [SerializeField] string _sceneName;
+    [SerializeField] string _sceneName = "Name";
 
     void Awake()
     {
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartGame();
+        
     }
 
     // Update is called once per frame
@@ -40,14 +40,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void RestartLevel()
     {
-        UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
-        _sceneName = SceneManager.GetActiveScene().name;
-        UIManager.Instance.UpdateSceneName(_sceneName);
+        SetPlayerLives();
     }
 
-    public void RestartLevel()
+    public void SetPlayerLives()
     {
         _livesCount--;
 
@@ -58,17 +56,40 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            _collectibleCount = 0;
-            _livesCount = 3;
+            SetNewGame();
             SceneManager.LoadScene("Game Over");
         }
     }
 
-    public void UpdateCollectibleAmount()
+    public void SetNewGame()
     {
-        _collectibleCount++;
-        UIManager.Instance.UpdateCollectibleScoreUI(_collectibleCount);
-        Debug.Log("The score is: " + _collectibleCount);
+        _collectibleCount = 0;
+        _livesCount = 3;
     }
 
+    public int GetPlayerLives()
+    {
+        return _livesCount;
+    }
+
+    public void SetCollectibleAmount()
+    {
+        _collectibleCount++;
+    }
+
+    public int GetCollectibleAmount()
+    {
+        return _collectibleCount;
+    }
+
+    public void SetCurrentSceneName()
+    {
+        _sceneName = SceneManager.GetActiveScene().name;
+    }
+
+    public string GetCurrentSceneName()
+    {
+        SetCurrentSceneName();
+        return _sceneName;
+    }
 }

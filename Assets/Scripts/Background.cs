@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Background : MonoBehaviour
 {
-    [SerializeField] float _moveSpeed = 10f;
+    [SerializeField] float _moveSpeed = 1f;
 
     // Start is called before the first frame update
     void Start()

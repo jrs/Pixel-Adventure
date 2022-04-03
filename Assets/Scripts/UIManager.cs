@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Image HeartOne, HeartTwo, HeartThree;
     public TextMeshProUGUI CollectibleCountText;
     public TextMeshProUGUI LevelText;
+    public TextMeshProUGUI GlobalLivesText;
 
     void Awake()
     {
@@ -20,13 +21,15 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.StartGame();
+        UpdateCollectibleScoreUI(GameManager.Instance.GetCollectibleAmount());
+        UpdatePlayerGlobalLivesUI(GameManager.Instance.GetPlayerLives());
+        UpdateSceneNameUI(GameManager.Instance.GetCurrentSceneName());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //UpdateCollectibleScoreUI(GameManager.Instance.GetCollectibleAmount());
     }
 
     public void UpdatePlayerHealthUI(int healthAmount)
@@ -66,8 +69,15 @@ public class UIManager : MonoBehaviour
         CollectibleCountText.SetText(amount.ToString());
     }
 
-    public void UpdateSceneName(string sceneName)
+    public void UpdatePlayerGlobalLivesUI(int amount)
     {
-        LevelText.text = sceneName;
+        GlobalLivesText.text = "Player x " + amount.ToString();
     }
+
+    public void UpdateSceneNameUI(string name)
+    {
+        LevelText.text = name;
+    }
+
+
 }

@@ -19,11 +19,12 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void GameOver()
     {
+        GameManager.Instance.SetNewGame();
         SceneManager.LoadScene("Main Menu");
     }
 }
