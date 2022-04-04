@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.Instance.SetNewGame();
     }
 
     // Update is called once per frame
@@ -24,7 +24,6 @@ public class MainMenu : MonoBehaviour
 
     public void GameOver()
     {
-        GameManager.Instance.SetNewGame();
         SceneManager.LoadScene("Main Menu");
     }
 }

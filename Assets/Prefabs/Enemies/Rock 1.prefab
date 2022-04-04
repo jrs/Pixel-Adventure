@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6273816618153689297}
   - component: {fileID: 6273816618153689296}
   - component: {fileID: 2927797010593298065}
+  - component: {fileID: 988427168}
   m_Layer: 0
   m_Name: Rock 1
   m_TagString: Enemy
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1475205413
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8800081985865436245, guid: 419f1f3d5fcf8204389dd119348a56e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,3 +120,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.09772956}
   serializedVersion: 2
   m_Radius: 0.93415344
+--- !u!114 &988427168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273816618153689303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40ad45f490aa034cba4aedaaa30a73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PatrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  Speed: 5
+  StartWaitTime: 1
