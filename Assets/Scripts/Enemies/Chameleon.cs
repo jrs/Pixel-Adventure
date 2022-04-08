@@ -8,6 +8,8 @@ public class Chameleon : MonoBehaviour
     public float Speed;
     public bool IsFacingLeft;
 
+    private float _waitTime = 0.5f;
+    private float _startWaitTime = 0;
     private Animator _myAnim;
     private Rigidbody2D _myRigidbody;
     private Collider2D _myCollider;

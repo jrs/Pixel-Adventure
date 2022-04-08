@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6273816618153689296}
   - component: {fileID: 2927797010593298065}
   - component: {fileID: 988427168}
+  - component: {fileID: 627246065}
+  - component: {fileID: 586250835187219990}
   m_Layer: 0
   m_Name: Rock 1
   m_TagString: Enemy
@@ -137,3 +139,30 @@ MonoBehaviour:
   - {fileID: 0}
   Speed: 5
   StartWaitTime: 1
+--- !u!114 &627246065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273816618153689303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18cb35466cf19c4ab8be8c714c99652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceForce: 5
+  CanTakeDamage: 1
+--- !u!114 &586250835187219990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273816618153689303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e55d12a5358284ab6ab4ff0ccd6c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextRock: {fileID: 2982821720861391860, guid: 3e506b022f10fcd47baab1639b0753ba, type: 3}
