@@ -4558,6 +4558,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 754052580}
     m_Modifications:
+    - target: {fileID: 814270145, guid: e3e15e1e55a00bf419a4c64a4148569a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: d6ae7ed56cd57e44aafcfee5d20c187b, type: 2}
     - target: {fileID: 5217498325244556820, guid: e3e15e1e55a00bf419a4c64a4148569a, type: 3}
       propertyPath: m_Name
       value: End Point
@@ -20928,7 +20932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2511078420635323503, guid: 009d1e46f7e2b2343a4cdf1a8f59bba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2511078420635323503, guid: 009d1e46f7e2b2343a4cdf1a8f59bba7, type: 3}
       propertyPath: m_LocalPosition.y
