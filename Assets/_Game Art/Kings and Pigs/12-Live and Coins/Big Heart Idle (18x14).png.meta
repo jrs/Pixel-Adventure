@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -304,6 +305,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Big Heart Idle (18x14)_1: -3075179375282782876
+      Big Heart Idle (18x14)_2: -8139120665926544298
+      Big Heart Idle (18x14)_0: 7524770952856964032
+      Big Heart Idle (18x14)_3: -816245314989502535
+      Big Heart Idle (18x14)_5: -7560668125873705574
+      Big Heart Idle (18x14)_4: 1944211724537626869
+      Big Heart Idle (18x14)_7: -3656239218742457601
+      Big Heart Idle (18x14)_6: 1987366461214730366
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

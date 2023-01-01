@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -352,6 +353,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Big Diamond Idle (18x14)_0: -4658123360840285283
+      Big Diamond Idle (18x14)_6: -5186337078384295754
+      Big Diamond Idle (18x14)_2: -317340658027101851
+      Big Diamond Idle (18x14)_8: -1205625001301180620
+      Big Diamond Idle (18x14)_4: -388936619253760004
+      Big Diamond Idle (18x14)_1: -9132469165398134140
+      Big Diamond Idle (18x14)_9: 7845550569223017404
+      Big Diamond Idle (18x14)_7: -3861491957359190046
+      Big Diamond Idle (18x14)_3: -8617004404026540419
+      Big Diamond Idle (18x14)_5: 7007702355635686782
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
